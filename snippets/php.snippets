@@ -90,13 +90,28 @@ snippet cvm
 	}
 	
 	/**
-	 * @param  $4
-	 * @return null
+	 * @param $4
 	 */
 	public function set$5($$2)
 	{
 	    $this->$2 = $$2;
 	}
-
+# mutators
+snippet mut
+	/**
+	 * @return ${3:}
+	 */
+	public function get${1:}()
+	{
+		return $this->${2:};
+	}
+	
+	/**
+	 * @param $3
+	 */
+	public function set$1($$2)
+	{
+	    $this->$2 = $$2;
+	}
 snippet xd
 	xdebug_print_function_stack();${3}
